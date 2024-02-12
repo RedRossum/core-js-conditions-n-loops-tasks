@@ -146,32 +146,32 @@ function convertToRomanNumerals(num) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(numberStr) {
-  const words = {
-    0: 'zero',
-    1: 'one',
-    2: 'two',
-    3: 'three',
-    4: 'four',
-    5: 'five',
-    6: 'six',
-    7: 'seven',
-    8: 'eight',
-    9: 'nine',
-    '-': 'minus',
-    '.': 'point',
-    ',': 'point',
-  };
-
-  let acc = '';
-
-  for (let i = 0; i < numberStr.length; i += 1) {
-    acc += `${words[numberStr[i]]}`;
-    if (i !== numberStr.length - 1) acc += ' ';
-  }
-  return acc;
+function convertNumberToString(/* numberStr */) {
+  throw new Error('Not implemented');
 }
-
+// const words = {
+//   0: 'zero',
+//   1: 'one',
+//   2: 'two',
+//   3: 'three',
+//   4: 'four',
+//   5: 'five',
+//   6: 'six',
+//   7: 'seven',
+//   8: 'eight',
+//   9: 'nine',
+//   '-': 'minus',
+//   '.': 'point',
+//   ',': 'point',
+// };
+//
+// let acc = '';
+//
+// for (let i = 0; i < numberStr.length; i += 1) {
+//   acc += `${words[numberStr[i]]}`;
+//   if (i !== numberStr.length - 1) acc += ' ';
+// }
+// return acc;
 /**
  * Determines whether a string is a palindrome.
  * In this task, the use of methods of the String and Array classes is not allowed.
@@ -206,8 +206,12 @@ function isPalindrome(str) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(/* str, letter */) {
-  throw new Error('Not implemented');
+function getIndexOf(str, letter) {
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] === letter) return i;
+  }
+
+  return -1;
 }
 
 /**
